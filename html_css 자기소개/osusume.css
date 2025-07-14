@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: ヒラギノ角ゴシック;
+    line-height: 1.7;
+    color: black;
+    font-style: 16px;
+}
+
+a {
+    color: black;
+    text-decoration: none; 
+  }
+
+  ul {
+    list-style: none;   /* 점(불릿) 없애기 */
+    padding: 0;         /* 기본 들여쓰기 제거 */
+    margin: 0;
+  }
+
+
+header{
+    padding: 27px 0;
+}
+
+
+.logo{
+    font-size: 24px;
+    font-weight: 700;
+
+    /* 부모 요소의 글꼴 크기 */
+    letter-spacing: -0.1em;
+
+    text-decoration: none;
+    color: black;
+}
+
+.logo span{
+    color: #2D73E3;
+}
+
+
+.container {
+    width: 90%;
+    /* 브라우저가 너무 커도 1120으로 고정 */
+    max-width: 1120px;
+
+    /* 왼쪽 오른족 밸런스 좋게 여백 */
+    margin: 0  auto;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+
+    /* 화면 작아지면 개행 */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header_menu li {
+    margin-left: 40px;
+}
+
+.header_menu li a:hover {
+    color: #2D73E3;
+    transition: .3s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #2D73E3;
+    font-size: 1.25rem;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;       /* ✅ 줄바꿈 금지 */
+    transition: 0.5s;
+    max-width: 100%;           /* ✅ 부모 영역을 벗어나지 않음 */
+    overflow: hidden;          /* ✅ 혹시 넘치면 잘라줌 */
+    text-overflow: ellipsis;   /* ✅ 너무 길면 ... 으로 생략 */
+  }
+
+.btn:hover{
+    border-radius: 30px;
+}
+
+
+.btn_text {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  /* 클릭 순간에 색 유지 */
+  .btn:active .btn_text {
+    color: white;
+  }
+
+  /* hover 시에도 흰색 유지 */
+  .btn:hover .btn_text {
+    color: white;
+  }
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+
+    header .container{
+        justify-content: center;
+    }
+
+    .header_menu li {
+        margin-left: 20px 16px 0;
+    }
+
+    .flex {
+        justify-content: center;
+
+    .btn {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      width: auto;              /* ✅ 100% 말고 내용 기반 크기 */
+      max-width: 90vw;          /* ✅ 화면 거의 다 쓰되, 너무 길면 제한 */
+      display: block;
+      margin: 0 auto;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .btn_text {
+        margin-top: 2rem; /* 위에 공간 추가 */
+    }
+ }
+}
+
+
+/* best */
+
+#best {
+    background-color: #2E73E2;
+    width: 70%;
+    padding-bottom: 3rem;
+    border-bottom-right-radius: 100px;
+    margin-bottom: 120px;
+}
+
+#best h1 {
+    padding-top: 50px;
+}
+
+#best h1 , p {
+    color: #fff;
+    margin-left: 2rem;
+}
+.best-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+
+.best-books li img {
+    width: 170px;
+    height: 250px;
+    object-fit: contain;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.best-books li {
+    background-color: #ffffff33;
+    border-radius: 20px;
+    padding: 1rem;
+    color: #fff;
+    list-style: none;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.best-books li:hover {
+    transform: translateY(-5px);  /* 살짝 튀는 효과 */
+}
+
+
+.best-books li span {
+    display: block;
+    margin-top: 0.5rem;
+    color: #fff;
+}
+
+/* data book */
+
+
+.data-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+    margin-bottom: 120px;
+}
+
+
+
+.data-books li img {
+    width: 170px;
+    height: 250px;
+    object-fit: contain;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.data-books li {
+    border-radius: 20px;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.data-books li:hover {
+    transform: translateY(-5px);  /* 살짝 튀는 효과 */
+}
+
+
+.data-books li span {
+    display: block;
+    margin-top: 0.5rem;
+
+}
+
+
+
+/* hitori book */
+
+
+.hitori-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+    margin-bottom: 120px;
+}
+
+
+
+.hitori-books li img {
+    width: 170px;
+    height: 250px;
+    object-fit: contain;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.hitori-books li {
+    border-radius: 20px;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.hitori-books li:hover {
+    transform: translateY(-5px);  /* 살짝 튀는 효과 */
+}
+
+
+.hitori-books li span {
+    display: block;
+    margin-top: 0.5rem;
+
+}
+
+
+
+
+
+
+/* footer */
+
+
+.sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.sns-list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 3rem;
+}
+
+.sns-list a img {
+    width: 3rem;
+}
+
+
+.footer-text{
+    margin: 100px;
+}
+
+.footer-text p {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .sns {
+        gap: 4rem;
+    }
+
+
+}
+

@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: ヒラギノ角ゴシック;
+    line-height: 1.7;
+    color: black;
+    font-style: 16px;
+}
+
+a {
+    color: black;
+    text-decoration: none; 
+  }
+
+  ul {
+    list-style: none;   /* 점(불릿) 없애기 */
+    padding: 0;         /* 기본 들여쓰기 제거 */
+    margin: 0;
+  }
+
+
+header{
+    padding: 27px 0;
+}
+
+
+.logo{
+    font-size: 24px;
+    font-weight: 700;
+
+    /* 부모 요소의 글꼴 크기 */
+    letter-spacing: -0.1em;
+
+    text-decoration: none;
+    color: black;
+}
+
+.logo span{
+    color: #2D73E3;
+}
+
+
+.container {
+    width: 90%;
+    /* 브라우저가 너무 커도 1120으로 고정 */
+    max-width: 1120px;
+
+    /* 왼쪽 오른족 밸런스 좋게 여백 */
+    margin: 0  auto;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+
+    /* 화면 작아지면 개행 */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header_menu li {
+    margin-left: 40px;
+}
+
+.header_menu li a:hover {
+    color: #2D73E3;
+    transition: .3s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #2D73E3;
+    font-size: 1.25rem;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;       /* ✅ 줄바꿈 금지 */
+    transition: 0.5s;
+    max-width: 100%;           /* ✅ 부모 영역을 벗어나지 않음 */
+    overflow: hidden;          /* ✅ 혹시 넘치면 잘라줌 */
+    text-overflow: ellipsis;   /* ✅ 너무 길면 ... 으로 생략 */
+  }
+
+.btn:hover{
+    border-radius: 30px;
+}
+
+
+.btn_text {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  /* 클릭 순간에 색 유지 */
+  .btn:active .btn_text {
+    color: white;
+  }
+
+  /* hover 시에도 흰색 유지 */
+  .btn:hover .btn_text {
+    color: white;
+  }
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+
+    header .container{
+        justify-content: center;
+    }
+
+    .header_menu li {
+        margin-left: 20px 16px 0;
+    }
+
+    .flex {
+        justify-content: center;
+
+    .btn {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      width: auto;              /* ✅ 100% 말고 내용 기반 크기 */
+      max-width: 90vw;          /* ✅ 화면 거의 다 쓰되, 너무 길면 제한 */
+      display: block;
+      margin: 0 auto;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .btn_text {
+        margin-top: 2rem; /* 위에 공간 추가 */
+    }
+ }
+}
+
+#hero {
+    background-image: url(img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 540px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+
+    /* 요소 나오면 컷 */
+    overflow: hidden;
+}
+
+#hero::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.2;
+}
+
+.hero_inner {
+    z-index: 2;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.hero_inner p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    #hero {
+        height: 460px;
+    }
+    
+    .hero_inner p{
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+
+/* #about */
+#about {
+    margin-bottom: 120px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 600px;
+    color:#2D73E3;
+    margin-bottom: 8px;
+}
+
+#about h3 {
+    font-size: 20px;
+    font-weight: 500px;
+    margin-bottom: 60px;
+}
+
+.columm-2 {
+    width: 48%;
+}
+
+.text{
+    line-height: 2;
+}
+
+
+.about-img{
+    background-image: url(img/sbout.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 340px;
+    border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #about h3{
+        font-size: 20px;
+        font-weight: 500px;
+    }
+
+    .columm-2 {
+        width: 100%;
+    }
+
+    .text{
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    .about-img{
+        margin-top: 50px;
+    }
+}
+
+
+
+
+/* #Learning */
+#learning{
+    margin-bottom: 120px;
+}
+
+
+#learning h3 {
+    font-size: 20px;
+    font-weight: 500px;
+    margin-bottom: 60px;
+}
+
+
+#learning h2 , #learning h3{
+    text-align: center;
+}
+
+/* 카드 전체 컨테이너 */
+.card-item {
+    width: 300px;                  /* 카드 너비 */
+    height: 350px;                 /* 카드 높이 */
+    border-radius: 10px;           /* 모서리를 둥글게 */
+    perspective: 1000px;           /* 3D 회전 시 깊이감 설정 */
+    position: relative;            /* 안쪽 요소들 position: absolute와 짝 맞춤 */
+}
+
+/* 앞면+뒷면을 포함한 내부 컨테이너 */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;            /* .card-front, .card-back에 absolute 기준점 제공 */
+    transform-style: preserve-3d;  /* 자식 요소들도 3D 회전되도록 설정 */
+    transition: transform 0.8s ease-in-out; /* 회전 시 부드럽게 애니메이션 적용 */
+}
+
+/* 마우스를 올리면 카드가 회전됨 */
+.card-item:hover .card-inner {
+    transform: rotateY(180deg);    /* Y축 기준으로 180도 회전 */
+}
+
+/* 앞면, 뒷면 공통 스타일 */
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;           /* 둥근 모서리 유지 */
+    position: absolute;           /* 서로 겹치게 배치 (앞뒤) */
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;  /* 뒤집힌 면이 보이지 않도록 설정 */
+}
+
+/* 카드 앞면 */
+.card-front {
+    background-image: url(img/java.png);     /* 배경 이미지 설정 */
+    background-position: center top;         /* 이미지 위치: 가운데 위쪽 */
+    background-size: contain;                /* 이미지 비율 유지하며 요소 안에 꽉 채움 */
+    background-repeat: no-repeat;            /* 이미지 반복 없음 */
+    box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    background-color: white;                 /* 배경이 없을 경우 대비용 */
+}
+
+/* 카드 뒷면 */
+.card-back {
+    background-color: #2F73E2;     /* 파란색 배경 */
+    transform: rotateY(180deg);    /* 뒷면을 미리 180도 회전해놓음 (앞면 뒤에 감춰지도록) */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+}
+
+.card-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.py{
+    background-image: url(img/py.png);
+}
+
+
+.my{
+    background-image: url(img/my.png);
+}
+
+.php{
+    background-image: url(img/php.png);
+}
+
+.js{
+    background-image: url(img/js.png);
+}
+
+.more{
+    background-image: url(img/more.png);
+}
+
+
+/* 
+#artist */
+
+.artist-img{
+    background-image: url(img/artist.png);
+    background-position: center;
+    background-size: cover;
+    height: 340px;
+    border-radius: 20px;
+}
+#artist h3 {
+    font-size: 20px;
+    font-weight: 500px;
+    margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+    #artist h3{
+        font-size: 20px;
+        font-weight: 500px;
+    }
+
+
+    .artist-img{
+        margin-bottom: 50px;
+    }
+}
+
+
+/* 
+#kodawari */
+
+
+#kodawari {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.kodawari-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #F2F2F2;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.kodawari-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 34px;
+    max-width: 300px;
+}
+
+.kodawari-list li h3 {
+    font-size: 18px;
+}
+
+.kodawari-list li p {
+    color: #707070;
+}
+
+
+.kodawari-list li:not(:last-child){
+    border-right: 1px solid #CCD7EA;
+}
+
+@media (max-width: 768px) {
+    .kodawari-list {
+      flex-direction: column; /* 가로 → 세로로 */
+      gap: 16px;               /* 세로 간격 추가 */
+    }
+
+    .kodawari-list li {
+      max-width: 100%;         /* 전체 너비 사용 */
+    }
+
+    .kodawari-list li:not(:last-child){
+        border-right: none;
+    }
+
+}
+
+
+
+/* footer */
+
+
+.sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.sns-list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 3rem;
+}
+
+.sns-list a img {
+    width: 3rem;
+}
+
+
+.footer-text{
+    margin: 100px;
+}
+
+.footer-text p {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .sns {
+        gap: 4rem;
+    }
+
+
+}
