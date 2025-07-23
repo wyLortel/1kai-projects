@@ -5,22 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1 + h2 {
-            color: red;
-        }
-
-        h1~h2 {
-            color: orange;
+        input:not([type=password]) {
+            background: red;
         }
     </style>
 </head>
-
 <body>
-    <h1>1</h1>
-    <h2>2</h2>
-    <h2>2</h2>
-    <h2>2</h2>
-    <h2>2</h2>
-
+    <input type="password" />
+    <input type="text" />
+    <input type="password" />
+    <input type="text" />
 </body>
 </html>
