@@ -1,0 +1,371 @@
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  /* font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal; */
+}
+
+.container { 
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* 헤더 */
+header {
+    padding: 27px 0;
+}
+
+.logo{
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+
+}
+
+.pop{
+     font-family: "Agbalumo", system-ui;
+     font-style: normal;
+}
+
+.logo span {
+    color: #80ba4a;
+}
+
+.header_menu li {
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+
+.header_menu li a {
+    transition: .3s;
+}
+
+
+.header_menu li a:hover {
+    color: #80ba4a;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    header .container { 
+    justify-content: center;
+    }
+
+    .header_menu li {
+        margin:20px 16px 0;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 메인 */
+#hero {
+    background-image: url("https://www.harpersbazaar.co.kr/resources_old/online/org_online_image/cf5c6612-80b8-4a1c-a41d-21149fc1749c.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.hero_inner{
+    z-index: 3;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.hero_inner p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.hero_inner h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #hero {
+    height: 460px;
+    }
+
+    .hero_inner p {
+    font-size: 16px
+    }
+
+    .hero_inner h1 {
+    font-size: 18px;
+    }
+    
+}
+
+
+
+/* concept */
+#concept {
+    margin-bottom: 120px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #80ba4a;
+    margin-bottom: 40px;
+}
+
+
+#concept h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.col-2{
+    width: 48%;
+}
+
+.text {
+    line-height: 2;
+    font-weight: 500;
+}
+
+.concept-img {
+    background-image: url(/샐러드미팅/img/286b3db7b3cc364b734ad372591ccc581.jpg);
+    background-position: center 30%; 
+    background-size: cover;
+    height: 340px;
+    border-radius: 20px;
+}
+
+.heading {
+    font-family: "Dancing Script", cursive;
+    font-size: 200px;
+    font-weight: 700;
+    color: #80ba4a;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-30%);
+    z-index: -1;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+   #concept h3 {
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .col-2{
+    width: 100%;
+    }
+
+    .text {
+    line-height: 1.7;
+    font-size: 16px;
+    }
+    .concept-img {
+    margin-top: 30px;
+    }
+    
+}
+
+
+
+
+
+/* 서비스 */
+#service {
+    margin-bottom: 120px;  
+}
+
+.service_inner {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.col-40{
+    width: 40%;
+}
+
+.col-55{
+    width: 55%;
+}
+
+#service img {
+    border-radius: 20px;
+}
+
+#service h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+
+@media only screen and (max-width: 768px) {
+   .col-40{
+    width: 100%;
+    margin-bottom: 30px;
+    }
+
+    .col-55{
+    width: 100%;
+    }
+
+    #service h3 {
+    font-size: 16px;
+    }
+    
+}
+
+
+
+
+
+/* 회사 */
+
+#company {
+    margin-bottom: 120px;
+}
+
+#company dl {
+    max-width: 900px;
+    margin-left: auto;
+}
+
+#company dt {
+    width: 30%;
+    padding: 48px 0;
+    border-bottom: solid 1.5px #d2ecba;
+}
+
+#company dd {
+    width: 70%;
+    padding: 48px 0;
+    font-weight: 400;
+    border-bottom: solid 1.5px #d2ecba;
+}
+
+@media only screen and (max-width: 768px) {
+   #company dl {
+    font-size: 13px;
+    padding: 36px 0;
+}
+    
+}
+
+
+/* 바텀 */
+.col-a {
+    background-image: url("https://lottemartzetta.com/images-v3/932dcbc7-fca8-4d43-bcde-f73d1ce3cc7d/2674e541-657c-448f-8723-ca58aab77064/500x500.jpg");
+    background-position: center 30%; 
+    background-size: cover;
+    height: 270px;
+    width: 24%;
+    border-radius: 20px;
+}
+
+.col-b {
+    background-image: url(https://tohomeimage.thehyundai.com/DP/DP018/2020/11/03/113423/fajrr.jpg);
+    background-position: center 30%; 
+    background-size: cover;
+    height: 270px;
+    width: 18%;
+    border-radius: 20px;
+}
+
+
+.col-c {
+    background-image: url("https://img.choroc.com/newshop/goods/024968/024968_1.jpg");
+    background-position: center 30%; 
+    background-size: cover;
+    height: 270px;
+    width: 24%;
+    border-radius: 20px;
+}
+
+
+.col-e {
+    background-image: url("https://prs.ohousecdn.com/apne2/any/v1-276909597634560.jpg?w=480&h=480&c=c&q=80&webp=1");
+    background-position: center 30%; 
+    background-size: cover;
+    height: 270px;
+    width: 28%;
+    border-radius: 20px;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+   .col-a, .col-b, .col-c, .col-e {
+    width: 48%;
+    height: 140px;
+    margin: 1%;
+   }
+}
+
+
+
+
+
+
+
+footer {
+    text-align: center;
+    margin: 90px 0;
+}
+
+.copy {
+    font-size: 16px;
+    margin-top: 40px;
+}
