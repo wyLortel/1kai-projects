@@ -12,7 +12,234 @@ header .row {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    background-color: green;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px 0px;
 }
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header nav ul {
+    display: flex;
+}
+
+
+header nav ul li {
+    margin-left: 50px;
+}
+
+header nav ul li a {
+    transition: 0.2s;
+}
+
+header nav ul li a:hover {
+    transition: 0.2s;
+    opacity: 0.6;
+}
+
+
+.main_visual {
+    background-image: url("https://downloadwap.com/thumbs2/wallpapers/p2ls/new/37/jsuSWneu.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    
+}
+
+.main_visual .container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280;
+    height: 640px;
+    position: relative;
+}
+
+.main_visual .title{
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    z-index: 2;
+}
+
+.main_visual h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+
+}
+
+.main_visual p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main_visual .purple {
+    background-color: #6f19a7;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+}
+
+.section1 {
+    color: #fff;
+    padding: 80px 0;
+}
+
+.section1 .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.section1 .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section1 .col{
+    width: 48%;
+}
+
+.section1 .sub_title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section1 h2{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.section1 .text {
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 50px 0px;
+
+}
+
+.btn {
+    font-size: 18px;
+    border: solid 1px #fff;
+    border-radius: 100px;
+    display: inline-block;
+    width: 270px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.btn:hover {
+    color: #6f19a7;
+    border: solid 1px #6f19a7;
+    transition: 0.2s;
+}
+
+.section2 {
+    color: #fff;
+    padding: 80px 0;
+}
+
+.section2 .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.section2 .sub_title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section2 h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.section2 .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.section2 .col {
+    width: 33%;
+    position: relative;
+}
+
+.section2 img {
+    border-radius: 20px;
+
+}
+
+.section2 h3 {
+    background-color: #6f19a7;
+    display: inline-block;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.section2 .center {
+    text-align: center;
+}
+
+.section3 {
+    color: #fff;
+    padding: 80px 0;
+}
+
+.section3 .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.section3 .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.section3 .sub_title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section3 h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.section3 .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section3 .col{
+    width: 40%;
+}
+
+.section3 img{
+    border-radius: 20px;
+     height: 100%;
+}
+
+
