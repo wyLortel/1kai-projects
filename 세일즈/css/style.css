@@ -1,0 +1,84 @@
+html {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+
+
+header{
+    font-family: 'Posins' , sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 24px;
+    text-align: center;
+}
+
+
+footer{
+    font-family: 'Posins' , sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 14px;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+}
+
+.hero{
+    background-image: url("https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2024%2F06%2F11%2Fstreetsnaps-han-roro-01-scaled.jpg?q=75&w=800&cbr=1&fit=max");
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+section{
+    padding: 80px 0;
+}
+
+.row{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+
+
+@media only screen and (min-width: 961px) {
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .col:first-child{
+    width: 40%;
+    }
+
+    .col:last-child{
+        width: 56%;
+    }
+}
+
+h2{
+    font-family: 'Posins' , sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.heading {
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-left: 3px;
+}
+
+li{
+    border-bottom: solid 1px lightgray;
+    padding: 20px 0;
+    font-size: 15px;
+}
+
+li span {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+}
