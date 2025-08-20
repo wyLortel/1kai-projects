@@ -29,6 +29,7 @@ main , footer {
     height: 28px;
     cursor: pointer;
     position: relative;
+    z-index: 30;
 }
 
 #hmb span{
@@ -40,3 +41,32 @@ main , footer {
     position: absolute;
     transition: .2s;
 }
+
+#hmb span:first-child{top:0;}
+
+#hmb span:nth-child(2){top: 12px;}
+#hmb span:last-child(2){top: 24px;}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: mediumpurple;
+    z-index: 20;
+}
+
+nav ul li a {
+    background-color: orange;
+    display: block;
+    margin-bottom: 16px;
+}
+
+
+
+
