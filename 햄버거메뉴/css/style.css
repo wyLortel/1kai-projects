@@ -59,6 +59,13 @@ nav {
     padding: 20px;
     background-color: mediumpurple;
     z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition-property: all;
+    transition-duration: .2s;
+
+
 }
 
 nav ul li a {
@@ -67,6 +74,27 @@ nav ul li a {
     margin-bottom: 16px;
 }
 
+.active #hmb span :first-child {
+    top: 12px;
+    transform: rotate(45deg);
+
+}
+
+
+.active #hmb span :nth-child(2) {
+    opacity: 0;
+}
+
+.active #hmb span:last-child{
+    top: 12px;
+    transform: rotate(-45deg);
+}
+
+.active nav{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
 
 
 
