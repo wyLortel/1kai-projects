@@ -1,0 +1,32 @@
+* {
+    color: black;
+}
+
+
+img{
+    width: 100;
+}
+
+
+h1,h2 {
+    color: magenta;
+}
+
+
+#logout{
+    padding: 10;
+}
+
+
+.complete {
+    color: green;
+}
+
+li a {
+    color: teal;
+}
+
+input[type = "text"] {
+    width: 300;
+}
+
